@@ -1,5 +1,16 @@
 .card {
-  box-shadow: 10px 10px 5px rgba(#000, 0.08);
+  box-shadow: 0 10px 10px rgba(#000, 0.08);
   border-radius: 7px;
   height: 100%;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(61, 171, 206, 0.05),
+    rgba(#fff, 0.5)
+  );
+  backface-visibility: hidden;
+  transition: all 0.2s ease-in;
+  &:hover {
+    transform: translateY(-1rem) scale(1.06);
+    box-shadow: 0 15px 5px rgba(#000, 0.08);
+  }
 }

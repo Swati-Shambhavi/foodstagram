@@ -23,11 +23,12 @@
     justify-content: space-evenly;
     align-items: center;
     & h1 {
-      font-size: 1.7rem;
+      font-size: 2rem;
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 800;
       font-family: 'Alegreya', serif;
       letter-spacing: 4px;
+      color: rgb(238, 9, 131);
     }
     & img {
       width: 20rem;

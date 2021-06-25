@@ -1,0 +1,39 @@
+.mealOrderForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+  backface-visibility: hidden;
+  p {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+  &__amt {
+    font-weight: 600;
+    font-size: 1.7rem;
+  }
+  &__amtVal {
+    margin-left: 6px;
+    font-size: 1.8rem;
+  }
+  &__add {
+    background-color: rgb(238, 9, 131);
+    border: none;
+    outline: none;
+    width: 9rem;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.2s;
+
+    &:active {
+      transform: translateY(1px);
+      background-color: rgb(255, 0, 64);
+    }
+  }
+}
