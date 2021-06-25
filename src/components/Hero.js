@@ -14,7 +14,7 @@ const Hero = () => {
               <h1 className="hero__text-one">Order,</h1>
             </span>
             <span>
-              <h1 className="hero__text-one">Post!</h1>
+              <h1 className="hero__text-one">Enjoy!</h1>
             </span>
           </div>
           <div className={style['hero__text-secondary']}>
