@@ -36,6 +36,7 @@
       align-self: center;
       justify-self: start;
       margin-top: 1.5rem;
+      color: #c6006e;
 
       @media only screen and (max-width: 700px) {
         margin-top: 0;
@@ -43,6 +44,7 @@
       & p {
         margin-top: 0.5rem;
         font-weight: 400;
+        color: black;
       }
     }
   }

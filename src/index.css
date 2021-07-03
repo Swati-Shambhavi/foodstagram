@@ -25,9 +25,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --color-primary-blue: rgb(27, 172, 216);
+  --color-primary-blueBlur: rgba(12, 180, 231, 0.7);
+  --color-primary-pink: rgb(255, 0, 136);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace; */
 }

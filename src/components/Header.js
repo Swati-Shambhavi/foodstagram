@@ -1,32 +1,55 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import style from '../scss/Header.module.scss';
+import CartContext from '../store/cart-context';
+import { Link, NavLink } from 'react-router-dom';
+import logo from '../images/logo.png';
+import { FaShoppingCart } from 'react-icons/fa';
 
-const Header = () => {
+const Header = (props) => {
+  const cartCtx = useContext(CartContext);
+  const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
+    return curNumber + item.amount;
+  }, 0);
   return (
     <>
       <nav>
         <ul className={style.nav}>
           <li className={`${style.nav__item} ${style.nav__itemLogo}`}>
-            Foodstagram
+            <Link to="/">
+              {' '}
+              <img src={logo} alt="" />
+            </Link>
           </li>
-          <li className={style.nav__item}>About us</li>
 
           <li className={style.nav__item}>
-            Menu
-            {/* <svg className={style['nav__item-menuIcon']}>
-              <use xlinkHref="../images/sprite.svg#icon-cart"></use>
-            </svg> */}
+            <NavLink activeClassName={style.active} to="/">
+              Home
+            </NavLink>
           </li>
+          <li className={style.nav__item}>
+            <Link to="/about">About us</Link>
+          </li>
+
           <li className={`${style.nav__item} ${style.nav__itemContact}`}>
-            Contact
+            <Link to="/contact">Contact</Link>
           </li>
-
-          <li className={style.nav__item}>
-            <span>Cart</span>
-            {/* <span>3</span> */}
+          <li
+            className={`${style.nav__item} ${style.nav__itemBtn} ${style.nav__itemBtnCart}`}
+          >
+            <a href="#" onClick={props.onShow}>
+              <span className={` ${style['nav__itemBtn--span']} `}>
+                <FaShoppingCart />
+              </span>
+              <span className={` ${style['nav__itemBtn--span']} `}>Cart</span>{' '}
+              <span className={`${style['nav__itemBtn--span']}`}>
+                {numberOfCartItems}
+              </span>
+            </a>
           </li>
           <li className={`${style.nav__item} ${style.nav__itemBtn}`}>
-            <a href="#">Login</a>
+            <a href="#">
+              <span>Login</span>
+            </a>
           </li>
         </ul>
       </nav>

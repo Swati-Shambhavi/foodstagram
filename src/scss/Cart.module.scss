@@ -1,0 +1,38 @@
+.cart {
+  margin: 2rem 0;
+
+  &__total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-text {
+      font-size: 2.3rem;
+      font-weight: 600;
+      flex: 1;
+    }
+    &-value {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+  &__action {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    & > * {
+      border: none;
+      margin-left: 2rem;
+      padding: 1rem 3rem;
+      color: white;
+      background-color: #c6006e;
+      border-radius: 3px;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.3);
+      transition: all 0.2s;
+      &:hover {
+        transform: scale(1.06);
+      }
+    }
+  }
+}

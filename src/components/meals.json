@@ -1,0 +1,38 @@
+
+  {"m1":{
+    "id":"m1",
+    "name":"Sushi",
+    "description":"Finest fish and veggies",
+    "price":499.99
+  },"m2":
+  {
+    "id":"m2",
+    "name":"Biryani",
+    "description":"A mughal specialty!",
+    "price":550.5
+  },"m3":
+  {
+    "id":"m3",
+    "name":"Barbecue Burger",
+    "description":"American, raw, meaty",
+    "price":250
+  },"m4":
+  {
+    "id":"m4",
+    "name":"Green Bowl",
+    "description":"Healthy...and green...",
+    "price":300
+  },"m5":
+  {
+    "id":"m5",
+    "name":"Pizza",
+    "description":"Pizza time",
+    "price":369
+  },"m6":
+  {
+    "id":"m6",
+    "name":"Golgappe",
+    "description":"Spicy and crunchy",
+    "price":250
+  }
+  }

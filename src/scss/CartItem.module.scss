@@ -1,0 +1,63 @@
+.cartitem {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #c6006e;
+  &__left {
+    flex: 1;
+  }
+  &__name {
+    font-size: 2.3rem;
+  }
+  &__price {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-add,
+    &-sub {
+      border: 1.6px solid #c6006e;
+      background-color: transparent;
+      width: 2.8rem;
+      cursor: pointer;
+      height: 2.2rem;
+      border-radius: 3px;
+      font-size: 2rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #c6006e;
+      box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.2);
+      transition: all 0.2s;
+      &:hover {
+        background-color: #c6006e;
+        color: white;
+        transform: scale(1.2);
+        box-shadow: 4px 4px 2px rgba($color: #000000, $alpha: 0.2);
+      }
+      &:active {
+        transform: translateY(-1px);
+      }
+    }
+    &-amount {
+      margin: 0 0.8rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      width: 2rem;
+      text-align: center;
+      border: 1.2px solid black;
+      border-radius: 3px;
+      height: 2.2rem;
+      width: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 2px 1px rgba($color: #000000, $alpha: 0.2);
+    }
+  }
+}
