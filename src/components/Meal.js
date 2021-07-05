@@ -4,7 +4,7 @@ import Card from './UI/Card';
 import MealOrderForm from './MealOrderForm';
 import CartContext from '../store/cart-context';
 
-const Meal = ({ name, des, price, pic, id }) => {
+const Meal = ({ name, des, price, pic, id, amt }) => {
   const cartCtx = useContext(CartContext);
   const addAmountHandler = (amt) => {
     cartCtx.addItems({
@@ -23,7 +23,7 @@ const Meal = ({ name, des, price, pic, id }) => {
         <p className={style['meals__info-price']}>Rs. {price.toFixed(2)}</p>
       </div>
       <div className="meals__orderForm">
-        <MealOrderForm id={id} onAddToCart={addAmountHandler} />
+        <MealOrderForm id={id} onAddToCart={addAmountHandler} amt={amt} />
       </div>
     </Card>
   );

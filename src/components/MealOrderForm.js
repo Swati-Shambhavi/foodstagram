@@ -6,12 +6,13 @@ import { FaCartPlus } from 'react-icons/fa';
 
 const MealOrderForm = (props) => {
   const cartCtx = useContext(CartContext);
+
   const amountInpurRef = useRef();
   const submitHandler = (e) => {
     e.preventDefault();
     const inputAmount = parseInt(amountInpurRef.current.value);
-
     props.onAddToCart(inputAmount);
+    console.log('amount=', props.amt);
   };
   return (
     <React.Fragment>

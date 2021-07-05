@@ -63,6 +63,7 @@ const AvailableMeals = () => {
               pic={pics[index]}
               des={meal.description}
               price={meal.price}
+              amt={meal.amt}
             />
           </li>
         ))}
