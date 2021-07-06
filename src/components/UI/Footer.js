@@ -18,20 +18,22 @@ const Footer = () => {
         <div className={style['footer__head--2']}>
           <span>About</span>
           <span>Contact us</span>
-          <span>Teams and conditions</span>
+          <span>Teams</span>
+          <span>Conditions</span>
           <span>Services</span>
         </div>
         <div className={style['footer__head--3']}>
-          <span>About</span>
-          <span>Contact us</span>
-          <span>Teams </span>
-          <span>Services</span>
+          <h3>Cusines</h3>
+          <span>Inidan</span>
+          <span>Chinese </span>
+          <span>Continental</span>
+          <span>Italian</span>
         </div>
         <div className={style['footer__head--4']}>
-          <span>About</span>
-          <span>Contact us</span>
-          <span>Teams</span>
-          <span>Services</span>
+          <h3>Benefits</h3>
+          <span>Fast delivery</span>
+          <span>Fresh ingredients</span>
+          <span>24*7 service</span>
         </div>
         {/* <div className={style['footer__head--1']}></div> */}
       </div>

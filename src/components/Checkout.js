@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
-
+import style from '../scss/Checkout.module.scss';
+import Button from '../components/UI/CartBtn';
+import CartBtn from '../components/UI/CartBtn';
 const Checkout = (props) => {
   const nameRef = useRef();
   const ad1Ref = useRef();
@@ -85,36 +87,38 @@ const Checkout = (props) => {
     }
   };
   return (
-    <div>
+    <div className={style.formContainer}>
       <form action="#" onSubmit={submitHandler}>
-        <div className="control">
+        <div className={style.formControl}>
           <label htmlFor="name">Your name</label>
           <input type="text" id="name" ref={nameRef} />
           {!formValidity.nameIsValid && (
             <p style={{ color: 'red' }}>Please enter your name</p>
           )}
         </div>
-        <div className="control">
+        <div className={style.formControl}>
           <label htmlFor="address1">Address Line 1:</label>
           <input type="text" id="address1" ref={ad1Ref} />
         </div>
-        <div className="control">
+        <div className={style.formControl}>
           <label htmlFor="address2">Address Line 2:</label>
           <input type="text" id="address2" ref={ad2Ref} />
         </div>
-        <div className="control">
+        <div className={style.formControl}>
           <label htmlFor="postal">Postal code</label>
           <input type="text" id="postal" ref={pcRef} maxLength="6" />
         </div>
-        <div className="control">
+        <div className={style.formControl}>
           <label htmlFor="phone">Phone number</label>
           <input type="text" id="phone" ref={phoneRef} maxLength="10" />
         </div>
-        <button type="submit">Confirm</button>
+        <div className={style.formContainer__buttons}>
+          <button type="submit">Confirm</button>
 
-        <button type="button" onClick={props.onCancel}>
-          Cancel
-        </button>
+          <button type="button" onClick={props.onCancel}>
+            Cancel
+          </button>
+        </div>
       </form>
     </div>
   );

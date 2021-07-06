@@ -5,42 +5,92 @@
   height: 80vh;
   display: grid;
   grid-template-columns: 1fr 3fr 4fr;
-  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
   background-size: cover;
-  // clip-path: polygon(0 1%, 100% 0, 100% 90%, 0% 100%);
+
+  @media (max-width: 500px) {
+    height: 60vh;
+    grid-template-columns: 0.7fr 3fr 2fr;
+  }
+  @media (max-width: 450px) {
+    height: 60vh;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+
   &__text {
     background-image: linear-gradient(
       to right bottom,
       rgba(61, 171, 206, 0.6),
       rgba($color: #fff, $alpha: 0.9)
     );
+
+    height: max-content;
     border-radius: 8px;
     grid-row: 2/3;
     grid-column: 2/3;
     display: grid;
     width: 90%;
-    grid-template-rows: 2fr 1fr;
-    padding: 2rem;
+    grid-template-rows: 1fr 1fr;
+    @media (max-width: 2000px) {
+      padding: 4rem;
+    }
+    @media (max-width: 1700px) {
+      padding: 3rem;
+    }
+    @media (max-width: 1000px) {
+      padding: 2rem;
+    }
+    @media (max-width: 900px) {
+      padding: 1.8rem;
+    }
+    @media (max-width: 600px) {
+      padding: 1.5rem;
+    }
+    @media (max-width: 300px) {
+      padding: 1rem;
+    }
     align-content: center;
     &-primary {
       grid-row: 1/2;
       font-size: 2.3rem;
       align-self: center;
-      justify-self: start;
       letter-spacing: 4px;
+
+      @media (max-width: 1000px) {
+        font-size: 2rem;
+      }
+      @media (max-width: 900px) {
+        font-size: 1.9rem;
+        letter-spacing: 3px;
+      }
+      @media (max-width: 700px) {
+        font-size: 1.8rem;
+        letter-spacing: 2.6px;
+      }
+      @media (max-width: 500px) {
+        font-size: 1.6rem;
+        letter-spacing: 1.5px;
+      }
+      @media (max-width: 300px) {
+        font-size: 1.4rem;
+        letter-spacing: 0;
+      }
     }
 
     &-secondary {
       grid-row: 2/3;
-      font-size: 1.5rem;
+      font-size: 1.9rem;
       align-self: center;
       justify-self: start;
-      margin-top: 1.5rem;
-      color: #c6006e;
-
-      @media only screen and (max-width: 700px) {
-        margin-top: 0;
+      color: var(--color-primary-pink);
+      @media (max-width: 700px) {
+        font-size: 1.5rem;
       }
+      @media (max-width: 400px) {
+        font-size: 1.4rem;
+      }
+
       & p {
         margin-top: 0.5rem;
         font-weight: 400;

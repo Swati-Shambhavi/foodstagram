@@ -38,16 +38,26 @@ const About = () => {
     <>
       <div className={style.container}>
         <div className={style['container__first']}>
-          <h1>We make sure that </h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            iusto dolor reprehenderit totam ab maxime enim eum suscipit nobis,
-            voluptate possimus ratione quisquam cumque nulla dicta deserunt
-            provident voluptatum officia. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Atque exercitationem ut veritatis voluptatem
-            facilis maiores aliquid sunt non, cupiditate ad nesciunt numquam
-            nobis, magni ab autem nisi et delectus soluta.
-          </p>
+          <h1>The business of good food</h1>
+          <div className={style.aboutPara}>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+              iusto dolor reprehenderit totam ab maxime enim eum suscipit nobis,
+              voluptate possimus ratione quisquam cumque nulla dicta deserunt
+              provident voluptatum officia. Lorem ipsum dolor sit amet
+              consectetur adipisicing Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Expedita, quidem. Quam eveniet totam impedit
+              rerum?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolore
+              ullam neque dolorum, ab magni quibusdam architecto natus sit,
+              facere rem reprehenderit veritatis sunt a numquam culpa. Quam,
+              assumenda fugit. Nihil perferendis, similique dolor, perspiciatis,
+              repellendus blanditiis atque nisi odit animi qui minima alias
+              quidem.
+            </p>
+          </div>
         </div>
         <div className={style.container__second}>
           <div className={style['container__second--card']}>

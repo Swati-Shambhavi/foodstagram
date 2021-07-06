@@ -3,7 +3,7 @@ import style from '../scss/Header.module.scss';
 import CartContext from '../store/cart-context';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../images/logo.png';
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart, FaSignInAlt } from 'react-icons/fa';
 
 const Header = (props) => {
   const cartCtx = useContext(CartContext);
@@ -27,30 +27,34 @@ const Header = (props) => {
             </NavLink>
           </li>
           <li className={style.nav__item}>
-            <Link to="/about">About us</Link>
+            <Link to="/about">About</Link>
           </li>
 
           <li className={`${style.nav__item} ${style.nav__itemContact}`}>
             <Link to="/contact">Contact</Link>
           </li>
+          {/* <div className={style.action}> */}
           <li
             className={`${style.nav__item} ${style.nav__itemBtn} ${style.nav__itemBtnCart}`}
           >
             <a href="#" onClick={props.onShow}>
               <span className={` ${style['nav__itemBtn--span']} `}>
-                <FaShoppingCart />
-              </span>
-              <span className={` ${style['nav__itemBtn--span']} `}>Cart</span>{' '}
+                <FaShoppingCart size="2.5rem" />
+              </span>{' '}
               <span className={`${style['nav__itemBtn--span']}`}>
                 {numberOfCartItems}
               </span>
+              <span className={` ${style['nav__itemBtn--span']} `}></span>{' '}
             </a>
           </li>
           <li className={`${style.nav__item} ${style.nav__itemBtn}`}>
             <a href="#">
-              <span>Login</span>
+              <span>
+                <FaSignInAlt size="2.5rem" />
+              </span>
             </a>
           </li>
+          {/* </div> */}
         </ul>
       </nav>
     </>
