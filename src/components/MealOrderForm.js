@@ -6,7 +6,7 @@ import { FaCartPlus } from 'react-icons/fa';
 
 const MealOrderForm = (props) => {
   const cartCtx = useContext(CartContext);
-
+  const [localAmt, setLocalAmt] = useState(1);
   const amountInpurRef = useRef();
   const submitHandler = (e) => {
     e.preventDefault();

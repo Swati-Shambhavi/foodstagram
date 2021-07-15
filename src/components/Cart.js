@@ -4,6 +4,8 @@ import Modal from './UI/Modal';
 import CartContext from '../store/cart-context';
 import CartItem from './CartItem.js';
 import Checkout from './Checkout';
+import { Redirect } from 'react-router-dom';
+import Authenticate from '../pages/Authenticate';
 
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
@@ -96,12 +98,13 @@ const Cart = (props) => {
                 Rs.{cartCtx.totalAmount.toFixed(2)}
               </span>
             </div>
-            {showCheckout && (
+            {showCheckout && cartCtx.isLoggedIn && (
               <Checkout
                 onConfirm={onConfirmOrderHandler}
                 onCancel={props.onHide}
               />
             )}
+            {showCheckout && !cartCtx.isLoggedIn && <Authenticate />}
             {!showCheckout && (
               <div className={style['cart__action']}>
                 <button

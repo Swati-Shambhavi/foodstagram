@@ -1,8 +1,17 @@
+// .headFixed {
+//   // overflow: hidden;
+//   background-color: white;
+//   width: 100vw;
+//   position: fixed;
+//   // top: 10rem;
+//   left: 0;
+//   z-index: 100;
+//   margin-bottom: 80rem;
+// }
 .nav {
   display: flex;
   box-sizing: border-box;
-  // justify-content: flex-end;
-  margin: 0 1rem;
+  padding: 0 1rem;
   align-items: center;
   border-bottom: 1px solid rgb(214, 225, 226);
   box-sizing: border-box;
@@ -48,8 +57,8 @@
       &:hover,
       &:active,
       .active {
-        color: rgb(255, 0, 136);
-        border-bottom: 2px solid rgb(255, 0, 136);
+        color: red;
+        border-bottom: 2px solid red;
       }
     }
 
@@ -80,6 +89,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     // height: 3.6rem;
     @media (max-width: 500px) {
       display: flex;

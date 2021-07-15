@@ -21,8 +21,8 @@
   &__text {
     background-image: linear-gradient(
       to right bottom,
-      rgba(61, 171, 206, 0.6),
-      rgba($color: #fff, $alpha: 0.9)
+      rgba(61, 171, 206, 0.9),
+      rgba($color: #fff, $alpha: 0.8)
     );
 
     height: max-content;
@@ -54,6 +54,11 @@
     &-primary {
       grid-row: 1/2;
       font-size: 2.3rem;
+      background-color: #6617cb;
+      background-image: linear-gradient(315deg, #6617cb 0%, #cb218e 74%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
       align-self: center;
       letter-spacing: 4px;
 
@@ -83,7 +88,7 @@
       font-size: 1.9rem;
       align-self: center;
       justify-self: start;
-      color: rgb(255, 0, 98);
+
       // color: var(--color-primary-pink);
       @media (max-width: 700px) {
         font-size: 1.5rem;

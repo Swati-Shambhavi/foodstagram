@@ -15,6 +15,7 @@ const Checkout = (props) => {
     pcIsValid: true,
     phoneIsValid: true,
   });
+
   const isNotEmpty = (value) => value.trim() !== '';
   const hasnChar = (value, n) => value.trim().length === n;
   const submitHandler = (e) => {
@@ -55,33 +56,6 @@ const Checkout = (props) => {
         postalCode: enteredPc,
         phoneNumber: enteredPhone,
       });
-      //   fetch(
-      //     'https://practice-ca38b-default-rtdb.firebaseio.com/UserData.json',
-      //     {
-      //       method: 'POST',
-      //       body: JSON.stringify({
-      //         name: enteredName,
-      //         addressLine1: enteredAd1,
-      //         addressLine2: enteredAd2,
-      //         postalCode: enteredPc,
-      //         phoneNumber: enteredPhone,
-      //       }),
-      //       headers: { 'Content-Type': 'application/json' },
-      //     }
-      //   )
-      //     .then((res) => {
-      //       if (!res.ok) {
-      //         throw new Error('Some error');
-      //       }
-      //       return res.json();
-      //     })
-      //     .then((data) => {
-      //       console.log('data posted');
-      //       console.log(data);
-      //     })
-      //     .catch((err) => {
-      //       console.log(err.message);
-      //     });
     } else {
       return;
     }

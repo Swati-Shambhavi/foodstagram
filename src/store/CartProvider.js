@@ -25,6 +25,7 @@ const cartReducer = (state, action) => {
       }
 
       return {
+        ...state,
         items: updatedItems,
         totalAmount: updatedTotalAmount,
       };
@@ -53,17 +54,31 @@ const cartReducer = (state, action) => {
           updatedItemAfterRemove;
       }
       return {
+        ...state,
         items: updatedItemsAfterRemove,
         totalAmount: updatedTotalAmountR,
       };
     case 'CLEAR_CART':
-      return { items: [], totalAmount: 0 };
+      return { ...state, items: [], totalAmount: 0 };
+    case 'LOGIN':
+      return { ...state, token: action.payload, isLoggedIn: true };
+    case 'LOGOUT':
+      return {
+        ...state,
+        token: null,
+        isLoggedIn: false,
+      };
   }
 };
 
+//by performing the below 2 steps we are checking if the user has logged in before, we are checking the token value in local storage; cz we set the localstorage to token value in loginHandler
+const initialToken = localStorage.getItem('token');
+const initialIsLoggedIn = !!initialToken;
 const initialCartState = {
   items: [],
   totalAmount: 0,
+  token: initialToken,
+  isLoggedIn: initialIsLoggedIn,
 };
 
 const CartProvider = (props) => {
@@ -77,6 +92,15 @@ const CartProvider = (props) => {
   const clearCartItemsAfterSubmit = () => {
     dispatchCart({ type: 'CLEAR_CART' });
   };
+
+  const loginHandler = (token) => {
+    dispatchCart({ type: 'LOGIN' });
+    localStorage.setItem('token', token);
+  };
+  const logoutHandler = () => {
+    dispatchCart({ type: 'LOGOUT' });
+    localStorage.removeItem('token');
+  };
   const [cartState, dispatchCart] = useReducer(cartReducer, initialCartState);
 
   const cartContext = {
@@ -85,6 +109,10 @@ const CartProvider = (props) => {
     addItems: addItemToCartHandler,
     removeItems: removeItemFromCartHandler,
     clearCartItems: clearCartItemsAfterSubmit,
+    token: cartState.token,
+    isLoggedIn: cartState.isLoggedIn,
+    login: loginHandler,
+    logout: logoutHandler,
   };
 
   return (

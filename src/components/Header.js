@@ -7,11 +7,16 @@ import { FaShoppingCart, FaSignInAlt } from 'react-icons/fa';
 
 const Header = (props) => {
   const cartCtx = useContext(CartContext);
+  const isLoggedIn = cartCtx.isLoggedIn;
   const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
     return curNumber + item.amount;
   }, 0);
+
+  const logoutHandler = () => {
+    cartCtx.logout();
+  };
   return (
-    <>
+    <div className={style.headFixed}>
       <nav>
         <ul className={style.nav}>
           <li className={`${style.nav__item} ${style.nav__itemLogo}`}>
@@ -49,7 +54,10 @@ const Header = (props) => {
           </li>
           <li className={`${style.nav__item} ${style.nav__itemBtn}`}>
             <a href="#">
-              <span>
+              {/* <Link to="/login">{!isLoggedIn && 'Login'}</Link> */}
+              {/* <span onClick={logoutHandler}>{isLoggedIn && 'Logout'}</span> */}
+
+              <span onClick={logoutHandler}>
                 <FaSignInAlt size="2.5rem" />
               </span>
             </a>
@@ -57,7 +65,7 @@ const Header = (props) => {
           {/* </div> */}
         </ul>
       </nav>
-    </>
+    </div>
   );
 };
 

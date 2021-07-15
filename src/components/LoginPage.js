@@ -1,9 +1,10 @@
 import React from 'react';
+import style from '../scss/Login.module.scss';
 
 const LoginPage = () => {
   return (
-    <div>
-      <form action="#">
+    <div className={style.login}>
+      <form>
         <div className="form__control">
           <label htmlFor="username">Enter your name</label>
           <input type="text" id="username" />
